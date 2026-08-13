@@ -1,0 +1,5 @@
+/* v37 — quiet locked startup, reliable revision history, quiet invalid manager weight UI */
+
+/* Keep weight-file validation active but do not show the red error blocks requested for removal. */
+#managerWeightMessage.error{display:none!important;}
+#managerWeightPreview > ul{display:none!important;}

@@ -1,0 +1,5 @@
+V46
+- Added revision role (Evaluator / Expert) to Management case revision history.
+- Added explicit Expert edit-permission status banner and role-scoped read-only enforcement.
+- Expert confirmation changes to "Confirm revisions and close permission" while an Expert revision authorization is active.
+- Management Excel now adds a Vehicle Comparison sheet when a second vehicle JSON is loaded, including comparison table and two weighted radar charts.

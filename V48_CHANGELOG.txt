@@ -1,0 +1,4 @@
+v48
+- Localized the comparison score denominator: Persian UI shows ۱۰۰; English UI shows 100.
+- Locked Evaluator cases remain browseable: criterion tabs, subgroup accordions, note accordions, and vehicle-view thumbnails can be opened.
+- All evaluator mutation controls remain disabled while locked unless the exact Management authorization is active.

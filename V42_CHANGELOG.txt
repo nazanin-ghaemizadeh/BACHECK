@@ -1,0 +1,12 @@
+V42 — Authenticated entry, full restore integrity, comparison refinements
+
+- Added local username/password sign-in before role selection.
+- Allowed accounts: ghaemizadeh@bamco.ir, a.zare@bamco.ir, tanhayian@bamco.ir; shared password: 123456.
+- All authenticated accounts can enter Evaluator, Expert, and Management panels.
+- Full-case backup now explicitly includes final comments, revision history, workflow state, and authenticated user metadata.
+- Full-case restore explicitly restores final comments, revision history, and workflow, then refreshes the visible final-comment UI.
+- Comparative radar is now two separate side-by-side radar charts using the existing Vehicle 1 blue and Vehicle 2 teal colors.
+- Comparative quality distribution now shows two bars per score grade, using the existing quality-grade colors with vehicle name/count in white on each bar.
+- Management final-comment editor is hidden in comparison mode.
+- Difference values use isolated LTR rendering so negative signs appear on the left.
+- Removed the exact legacy comparison artifact text 465360.262 if it appears.

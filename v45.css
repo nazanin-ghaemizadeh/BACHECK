@@ -1,0 +1,46 @@
+/* v45 — comparison control cleanup and evaluator-experience lock */
+
+/* The comparison message strip was the source of a stray changing numeric artifact.
+   Status remains available in the workspace header, so this redundant strip is removed. */
+#managerComparisonCard .comparisonMessage{display:none!important}
+#managerComparisonCard .comparisonControls{
+  grid-template-columns:minmax(250px,auto) minmax(190px,auto)!important;
+  justify-content:start!important;
+}
+
+/* Destructive action mirrors the Management weight-file removal treatment. */
+#managerComparisonCard .comparisonRemoveButton{
+  background:#fbe9e9!important;
+  color:#a33b3b!important;
+  border:1px solid #e9bcbc!important;
+  box-shadow:none!important;
+}
+#managerComparisonCard .comparisonRemoveButton:hover:not(:disabled){
+  background:#f7dddd!important;
+  color:#8f2929!important;
+  border-color:#e3aaaa!important;
+}
+#managerComparisonCard .comparisonRemoveButton:disabled{
+  background:#f8eeee!important;
+  color:#b98b8b!important;
+  border-color:#ead5d5!important;
+  opacity:.55!important;
+}
+
+/* Work-experience control must look and behave locked with the rest of the finalized evaluator form. */
+.caseLocked:not(.caseAuthorizedEdit) [data-experience-select="evaluator"],
+.caseLocked:not(.caseAuthorizedEdit) [data-experience-other="evaluator"]{
+  pointer-events:none!important;
+  opacity:.58!important;
+  cursor:not-allowed!important;
+}
+.caseLocked.caseAuthorizedEdit [data-experience-select="evaluator"],
+.caseLocked.caseAuthorizedEdit [data-experience-other="evaluator"]{
+  pointer-events:auto!important;
+  opacity:1!important;
+  cursor:auto!important;
+}
+
+@media(max-width:760px){
+  #managerComparisonCard .comparisonControls{grid-template-columns:1fr!important}
+}
