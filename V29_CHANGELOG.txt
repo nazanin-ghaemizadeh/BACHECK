@@ -1,4 +1,0 @@
-V29
-- Strengths now use scores 6–10 only; score 5 is excluded from strengths and remains eligible for weaknesses.
-- When no chart data exists, the performance, quality-distribution, and radar cards are given the same compact height.
-- Empty chart hosts collapse to a single-line message area and automatically return to normal sizing when data appears.
