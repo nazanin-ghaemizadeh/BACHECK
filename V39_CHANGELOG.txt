@@ -1,7 +1,0 @@
-V39 — Management-only edit authorization
-
-- Reopen/Edit Authorization is now visible only in Management, never in Evaluator or Expert.
-- Role redraws can no longer accidentally reveal the management unlock button.
-- Entering editor name and revision reason in Management immediately creates a visible revision-session record.
-- The same revision record is updated as actual edits occur, instead of waiting for the first edit or creating repeated short-window entries.
-- Persian and English revision-history date/time labels distinguish authorization from applied revision.

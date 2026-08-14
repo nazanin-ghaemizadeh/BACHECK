@@ -1,9 +1,0 @@
-V44
-- Added hosseinzadeh@bamco.ir as Management-only user. Password: 123456.
-- Existing three users retain Evaluator, Expert, and Management access.
-- Replaced global reopen behavior with manager-issued edit authorization scoped to case + target user + target role.
-- Edit authorization is stored in the case workflow and therefore included in full JSON backup/restore.
-- Authorized users can edit only in the granted role; other roles remain locked.
-- Evaluation revision history continues to record the target editor, reason, date, time, and changes.
-- Enlarged comparison radar charts to the Management dashboard scale.
-- Restyled the comparison table to match the Management integrated-summary table, including row number, icon, criterion accent, and bilingual direction behavior.

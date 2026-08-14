@@ -1,6 +1,0 @@
-V43
-- Fixed Persian signed-in user label/email direction using isolated RTL label + LTR email.
-- Removed the quality-grade chart from comparison mode.
-- Removed the weighted performance head-to-head chart from comparison mode.
-- Rebuilt both comparison radar charts to match the Management radar logic and styling: same weighted visual formula, same 15 criterion colors, criterion names on axes, and vertex scores.
-- Kept the two radars side by side on desktop and stacked them on narrower screens.
