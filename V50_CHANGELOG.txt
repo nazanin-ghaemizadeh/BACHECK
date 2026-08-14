@@ -1,6 +1,0 @@
-v50 final refinements
-- Evaluator locked-status banner moved to the top of the Evaluator form.
-- Application logo replaced with the user-provided BAC/BAMCO logo.
-- Persian and English user guide wording revised to describe the application purpose and role-specific controls more clearly.
-- Guide now states that Start New Assessment is available only in the Evaluator panel.
-- Removed the guide sentence calling out excluded weight/weighted-score columns from Evaluator Excel.
