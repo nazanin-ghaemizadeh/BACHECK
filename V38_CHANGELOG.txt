@@ -1,0 +1,10 @@
+V38 — English table accent alignment and English-only export filenames
+
+- In English mode, the colored criterion accent line in the management summary table is aligned to the left edge.
+- All generated/downloaded filenames are now English/ASCII-safe regardless of the active interface language.
+- Evaluator JSON: vehicle_assessment_<model>.json
+- Evaluator Excel: vehicle_assessment_<model>.xlsx
+- Expert Excel: criterion_weights_<expert>.xlsx
+- Manager Excel: management_dashboard_<model>.xlsx
+- Full case backup: full_case_backup_<model>_<date>.json
+- Non-Latin model/person names fall back to vehicle/expert in filenames to keep filenames English-only.
