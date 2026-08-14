@@ -1,0 +1,6 @@
+BAMCO Mobile v52
+- Dedicated Management page for mobile/tablet use.
+- Management content split into Overview, Charts, Weights & Compare, and Reviews & History tabs.
+- Dedicated mobile Management header with role back navigation, language switch, backup/open/export/revision actions.
+- Existing assessment, permissions, comparison, JSON backup and Excel logic preserved.
+- Service worker cache bumped to v52 for reliable PWA updates.

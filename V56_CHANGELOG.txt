@@ -1,0 +1,7 @@
+v56 mobile updates
+- Install guide now says mobile device and shows both iOS and Android instructions.
+- Entry welcome heading is smaller and kept on one line on phones.
+- Assessment/expert/manager case data is cleared on each page load; authenticated session is preserved.
+- Mobile Excel delivery uses an explicit ready modal with Save/Share and Download options.
+- Mobile Excel buttons use a guarded export runner with visible errors.
+- PWA cache bumped to v56.

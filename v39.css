@@ -1,0 +1,2 @@
+/* v39 — management-only edit authorization and persistent revision-session record */
+body:not(.managerMode) #unlockAssessmentButton{display:none!important;}

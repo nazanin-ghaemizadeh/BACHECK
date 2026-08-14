@@ -1,0 +1,9 @@
+BAMCO Vehicle Assessment MOBILE v54
+- BAC mobile logo/layout aligned with supplied reference.
+- FA/EN control moved into the same horizontal action toolbar as role actions.
+- Management remains an isolated mobile view, but the four internal management tabs were removed; all management content is one continuous page.
+- The original common application header is reused in Management for consistent mobile behavior.
+- Weighted-performance chart switches to a readable horizontal mobile layout.
+- Radar charts preserve readable dimensions with local horizontal scrolling instead of being squeezed.
+- Excel downloads now use an appended download anchor with delayed object-URL cleanup for Safari/PWA compatibility in Evaluator, Expert and Management exports.
+- PWA cache bumped to v54.

@@ -1,0 +1,183 @@
+/* v53 mobile stability layer — loaded last on purpose. */
+
+/* Respect the native hidden attribute. Older phone styles forced some hidden
+   screens back to display:block/grid, which caused the login screen and app
+   panels to appear at the same time. */
+html body [hidden]{display:none!important}
+
+@media(max-width:900px){
+  /* One screen at a time on phone/tablet. */
+  #entryScreen[hidden],#appShell[hidden]{display:none!important}
+  body.mobileAppActive #entryScreen{display:none!important}
+  body:not(.mobileAppActive) #appShell{display:none!important}
+
+  /* Management is a genuinely isolated view: nothing from the ordinary main
+     document is allowed to render below the dedicated management page. */
+  body.mobileManagerActive #appShell>main>:not(#mobileManagerPage){display:none!important}
+  body.mobileManagerActive #mobileManagerPage{display:block!important}
+  body.mobileManagerActive .appFooter{display:none!important}
+
+  /* Compact role header for Evaluator / Expert. Old responsive rules turned
+     every control into full-width rows; this keeps actions in one scrollable
+     toolbar instead. */
+  body:not(.mobileManagerActive) .topbar{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    align-items:stretch!important;
+    gap:8px!important;
+    padding:calc(9px + env(safe-area-inset-top)) max(11px,env(safe-area-inset-right)) 9px max(11px,env(safe-area-inset-left))!important;
+    min-height:0!important;
+  }
+  body:not(.mobileManagerActive) .topbar .brand{
+    width:100%!important;
+    min-width:0!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:flex-start!important;
+    gap:10px!important;
+  }
+  body:not(.mobileManagerActive) .topbar .brand img{
+    display:block!important;
+    width:86px!important;
+    height:54px!important;
+    flex:0 0 86px!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    padding:0!important;
+    border:1px solid #ffffff55!important;
+    border-radius:10px!important;
+    background:#050505!important;
+    box-shadow:none!important;
+  }
+  body:not(.mobileManagerActive) .topbar .brand>div{min-width:0!important}
+  body:not(.mobileManagerActive) .topbar .brand strong{
+    display:block!important;
+    font-size:19px!important;
+    line-height:1.3!important;
+    white-space:normal!important;
+  }
+  body:not(.mobileManagerActive) .topbar .brand small{
+    display:block!important;
+    margin-top:2px!important;
+    font-size:12px!important;
+    line-height:1.35!important;
+    white-space:normal!important;
+  }
+  body:not(.mobileManagerActive) .headerActions{
+    width:100%!important;
+    min-width:0!important;
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) 48px!important;
+    align-items:center!important;
+    gap:7px!important;
+  }
+  body:not(.mobileManagerActive) .headerActions .actionCard{
+    width:100%!important;
+    min-width:0!important;
+    display:flex!important;
+    flex-flow:row nowrap!important;
+    justify-content:flex-start!important;
+    align-items:center!important;
+    gap:7px!important;
+    margin:0!important;
+    padding:0 0 3px!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    -webkit-overflow-scrolling:touch!important;
+    scrollbar-width:none!important;
+  }
+  body:not(.mobileManagerActive) .headerActions .actionCard::-webkit-scrollbar{display:none!important}
+  body:not(.mobileManagerActive) .headerActions .actionCard:before{display:none!important}
+  body:not(.mobileManagerActive) .headerActions .actionCard>button,
+  body:not(.mobileManagerActive) .headerActions .actionCard>.button,
+  body:not(.mobileManagerActive) .headerActions .expertHeaderActions,
+  body:not(.mobileManagerActive) .headerActions .expertHeaderActions>button{
+    flex:0 0 auto!important;
+    width:auto!important;
+    min-width:max-content!important;
+    max-width:none!important;
+    min-height:42px!important;
+    white-space:nowrap!important;
+  }
+  body:not(.mobileManagerActive) .headerActions .expertHeaderActions:not([hidden]){
+    display:flex!important;
+    flex-flow:row nowrap!important;
+    align-items:center!important;
+    gap:7px!important;
+  }
+  body:not(.mobileManagerActive) .headerActions .languageButton{
+    grid-column:2!important;
+    width:48px!important;
+    min-width:48px!important;
+    min-height:42px!important;
+    padding-inline:6px!important;
+  }
+
+  /* Login logo: the supplied artwork has a dark background. Do not place it
+     on the old white image tile, otherwise it looks like a blank box on iOS. */
+  #entryScreen .entryBrand img{
+    display:block!important;
+    width:138px!important;
+    height:82px!important;
+    max-width:138px!important;
+    max-height:82px!important;
+    padding:0!important;
+    border:1px solid #d8e2e9!important;
+    border-radius:12px!important;
+    background:#050505!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    box-shadow:none!important;
+  }
+
+  /* Dedicated management page. */
+  .mobileManagerPage{width:100%!important;min-width:0!important}
+  .mobileManagerHeader{
+    margin-top:0!important;
+    border-radius:14px!important;
+    box-shadow:none!important;
+  }
+  .mobileManagerHeaderTop{
+    grid-template-columns:auto minmax(0,1fr) auto!important;
+  }
+  .mobileManagerActions{
+    display:flex!important;
+    flex-flow:row nowrap!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    gap:7px!important;
+    padding-bottom:3px!important;
+    -webkit-overflow-scrolling:touch!important;
+    scrollbar-width:none!important;
+  }
+  .mobileManagerActions::-webkit-scrollbar{display:none!important}
+  .mobileManagerActions button{
+    flex:0 0 auto!important;
+    width:auto!important;
+    min-width:max-content!important;
+    min-height:42px!important;
+    white-space:nowrap!important;
+  }
+  .mobileManagerTabs{
+    display:flex!important;
+    flex-flow:row nowrap!important;
+    overflow-x:auto!important;
+    gap:6px!important;
+    -webkit-overflow-scrolling:touch!important;
+    scrollbar-width:none!important;
+  }
+  .mobileManagerTabs::-webkit-scrollbar{display:none!important}
+  .mobileManagerTabs button{flex:0 0 auto!important;min-width:max-content!important;padding-inline:14px!important}
+  .mobileManagerPanel{min-width:0!important;width:100%!important}
+}
+
+@media(max-width:430px){
+  body:not(.mobileManagerActive) .topbar .brand img{width:76px!important;height:48px!important;flex-basis:76px!important}
+  body:not(.mobileManagerActive) .topbar .brand strong{font-size:17px!important}
+  body:not(.mobileManagerActive) .topbar .brand small{font-size:11px!important}
+  #entryScreen .entryBrand img{width:126px!important;height:76px!important}
+}
+@media(max-width:900px){
+  .mobileRoleLabel{display:block;margin-top:2px;color:#d8eaff;font-size:11px;font-weight:700;line-height:1.25}
+  body.mobileManagerActive .mobileRoleLabel{display:none!important}
+}

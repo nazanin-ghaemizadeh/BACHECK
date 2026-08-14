@@ -1,0 +1,21 @@
+/* v47 — Excel completion + multi-vehicle comparison */
+.comparisonCountPrompt{
+  margin-top:18px;padding:18px;border:1px solid #d8e6ee;border-radius:15px;background:linear-gradient(135deg,#f8fbfd,#f1f8f7);
+  display:grid;grid-template-columns:minmax(280px,1fr) minmax(180px,230px) auto;gap:14px;align-items:end
+}
+.comparisonCountPrompt h3{margin:0 0 5px;color:#173f63;font-size:18px}.comparisonCountPrompt p{margin:0;color:#687e90;line-height:1.7;font-size:13px}
+.comparisonCountPrompt label,.comparisonCountToolbar label{display:grid;gap:6px;color:#49657b;font-weight:800;font-size:13px}
+.comparisonCountPrompt select,.comparisonCountToolbar select{min-height:44px;border:1px solid #cadbe5;border-radius:10px;background:#fff;padding:8px 12px;color:#173f63;font:inherit}
+.comparisonCountPrompt button,.comparisonCountToolbar button{min-height:44px;border:0;border-radius:11px;padding:9px 18px;background:linear-gradient(135deg,#164e79,#11857e);color:#fff;font-weight:900;cursor:pointer}
+.comparisonCountToolbar{margin-top:16px;padding:12px 14px;border:1px solid #dce7ed;border-radius:13px;background:#f9fbfc;display:grid;grid-template-columns:1fr 180px auto;gap:12px;align-items:end}
+.comparisonCountToolbar>div{display:grid;gap:3px}.comparisonCountToolbar>div strong{color:#173f63}.comparisonCountToolbar>div span{color:#718697;font-size:12px}
+.multiComparisonUploadGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px}
+.comparisonUploadSlot{border:1px solid #dbe7ee;border-radius:14px;background:#fff;padding:14px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;min-width:0}
+.comparisonUploadSlot.loaded{background:#f8fcfb;border-color:#cae5df}.comparisonUploadSlot>div:first-child{display:grid;gap:4px;min-width:0}.comparisonUploadSlot small{color:#748798;font-weight:800}.comparisonUploadSlot strong{color:#173f63;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.comparisonUploadSlot span{color:#75899a;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.comparisonSlotActions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}.comparisonSlotActions .comparisonUploadButton,.comparisonSlotActions .comparisonRemoveButton{min-height:40px;padding:8px 13px;border-radius:10px;font-size:12px}
+.multiComparisonScoreGrid{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))!important}.comparisonCardDiff{font-family:"Times New Roman",serif;font-weight:900!important}
+.multiRadarGrid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:22px!important}.multiRadarGrid .comparisonRadarPane{min-height:610px!important}
+.multiVehicleComparisonTable{overflow-x:auto!important}.multiVehicleComparisonHead,.multiVehicleComparisonRow{gap:10px!important}.multiVehicleScore{display:grid;gap:2px;justify-items:center}.multiVehicleScore b{font:800 16px "Times New Roman",serif;color:#176d91}.multiVehicleScore small{font:900 11px "Times New Roman",serif}.multiVehicleComparisonHead span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media(max-width:1250px){.multiRadarGrid{grid-template-columns:1fr!important}}
+@media(max-width:900px){.comparisonCountPrompt{grid-template-columns:1fr 1fr}.comparisonCountPrompt>div{grid-column:1/-1}.comparisonCountToolbar{grid-template-columns:1fr 1fr}.comparisonCountToolbar>div{grid-column:1/-1}.multiComparisonUploadGrid{grid-template-columns:1fr}}
+@media(max-width:560px){.comparisonCountPrompt,.comparisonCountToolbar{grid-template-columns:1fr}.comparisonCountPrompt>div,.comparisonCountToolbar>div{grid-column:auto}.comparisonUploadSlot{grid-template-columns:1fr}.comparisonSlotActions{justify-content:stretch}.comparisonSlotActions>*{flex:1}}
