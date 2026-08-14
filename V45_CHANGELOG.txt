@@ -1,5 +1,0 @@
-V45
-- Locked evaluator work-experience select/manual field after finalization unless the exact evaluator edit authorization is active.
-- Added capture-phase guards so the evaluator experience cannot mutate while locked.
-- Removed the redundant comparison message strip that could display a changing stray numeric artifact.
-- Restyled Remove Second Vehicle as a red destructive action matching the Management weight-file removal button.
