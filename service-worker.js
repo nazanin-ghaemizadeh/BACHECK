@@ -1,0 +1,94 @@
+const CACHE_NAME="bamco-assessment-v55";
+const PRECACHE=[
+  "./",
+  "./index.html",
+  "./app.js",
+  "./bamco-logo.png",
+  "./bamco-logo-mobile.png",
+  "./data.js",
+  "./executive.css",
+  "./expert.css",
+  "./expert.js",
+  "./features.css",
+  "./features.js",
+  "./guide.css",
+  "./guide.js",
+  "./icons/apple-touch-icon.png",
+  "./icons/icon-192.png",
+  "./icons/icon-512.png",
+  "./icons/icon-maskable-512.png",
+  "./index.html",
+  "./manager-icon-fix.css",
+  "./manager.css",
+  "./manager.js",
+  "./manifest.webmanifest",
+  "./mobile.css",
+  "./v54-mobile.js",
+  "./v54-mobile.css",
+  "./mobile-save.js",
+  "./mobile.js",
+  "./polished.css",
+  "./refinement.css",
+  "./styles.css",
+  "./v14.css",
+  "./v15.css",
+  "./v20.css",
+  "./v20.js",
+  "./v21.css",
+  "./v21.js",
+  "./v22.css",
+  "./v22.js",
+  "./v23.css",
+  "./v23.js",
+  "./v24.css",
+  "./v24.js",
+  "./v25.css",
+  "./v26.css",
+  "./v26.js",
+  "./v29.css",
+  "./v29.js",
+  "./v30.js",
+  "./v32.css",
+  "./v32.js",
+  "./v37.css",
+  "./v39.css",
+  "./v40.css",
+  "./v40.js",
+  "./v41.css",
+  "./v42.css",
+  "./v42.js",
+  "./v43.css",
+  "./v44.css",
+  "./v45.css",
+  "./v45.js",
+  "./v46.css",
+  "./v46.js",
+  "./v47.css",
+  "./v48.css",
+  "./v48.js",
+  "./v49.css",
+  "./v49.js",
+  "./v53-mobile.css",
+  "./v53-mobile.js",
+  "./vendor/exceljs.min.js",
+  "./vendor/html2canvas.min.js",
+  "./vendor/html2pdf.bundle.min.js",
+  "./vendor/jspdf.umd.min.js"
+];
+self.addEventListener("install",event=>{event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(PRECACHE)).then(()=>self.skipWaiting()))});
+self.addEventListener("activate",event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE_NAME).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
+self.addEventListener("fetch",event=>{
+  const req=event.request; if(req.method!=="GET") return;
+  const url=new URL(req.url); if(url.origin!==self.location.origin) return;
+  if(req.mode==="navigate"){
+    event.respondWith(fetch(req).then(res=>{
+      if(res&&res.status===200){const copy=res.clone();caches.open(CACHE_NAME).then(c=>c.put("./index.html",copy));}
+      return res;
+    }).catch(()=>caches.match("./index.html").then(r=>r||caches.match("./"))));
+    return;
+  }
+  event.respondWith(caches.match(req).then(cached=>cached||fetch(req).then(res=>{
+    if(res&&res.status===200){const copy=res.clone();caches.open(CACHE_NAME).then(c=>c.put(req,copy));}
+    return res;
+  }).catch(()=>Response.error())));
+});

@@ -1,0 +1,14 @@
+/* v43 — Persian auth direction and management-identical comparison radars */
+#entryAuthenticatedUser{font-family:inherit!important;display:inline-flex;align-items:center;gap:6px;min-width:0;direction:ltr!important;unicode-bidi:isolate!important}
+html[dir="rtl"] #entryAuthenticatedUser{flex-direction:row-reverse;justify-content:flex-start}
+#entryAuthenticatedUser .authSignedLabel{font-family:inherit;white-space:nowrap;direction:rtl;unicode-bidi:isolate}
+html[dir="ltr"] #entryAuthenticatedUser .authSignedLabel{direction:ltr}
+#entryAuthenticatedUser .authSignedEmail{direction:ltr!important;unicode-bidi:isolate!important;font-family:"Times New Roman",serif;white-space:nowrap}
+.comparisonRadarOnlyGrid{grid-template-columns:1fr!important}
+.comparisonRadarPairCard{grid-column:1/-1!important}
+.comparisonRadarPair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
+.comparisonRadarPane{min-width:0;border:1px solid #e0e8ed;border-radius:14px;padding:12px;background:#fbfdfe;display:flex;flex-direction:column;align-items:stretch}
+.comparisonRadarPane>strong{display:block;width:100%;text-align:center;margin-bottom:4px;color:#294f6b;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.comparisonManagerRadar.radarChart{min-height:420px;width:100%;overflow:visible}
+.comparisonManagerRadar.radarChart svg{width:min(620px,100%);height:420px;overflow:visible}
+@media(max-width:980px){.comparisonRadarPair{grid-template-columns:1fr}}

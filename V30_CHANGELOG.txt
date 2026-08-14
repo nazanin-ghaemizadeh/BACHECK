@@ -1,0 +1,5 @@
+v30
+- Strengths: only score levels 10, 9, and 8 are eligible, with priority 10 > 9 > 8 within each criterion.
+- Weaknesses: only score levels 1, 2, and 3 are eligible, with priority 1 > 2 > 3 within each criterion.
+- Scores 4 through 7 are excluded from both lists.
+- Criteria with zero active weight remain excluded.

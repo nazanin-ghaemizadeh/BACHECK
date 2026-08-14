@@ -1,0 +1,8 @@
+V53 Mobile UI Fix
+- Fixed legacy mobile CSS overriding the HTML hidden attribute.
+- Login/role selection and application are now mutually exclusive screens.
+- Management is isolated as a dedicated mobile page; no ordinary main content renders below it.
+- Evaluator/Expert header actions use a compact horizontal toolbar instead of stacked full-width buttons.
+- Corrected BAMCO logo presentation on dark artwork without the old white image tile.
+- Added role label to the mobile header.
+- Service worker cache bumped to v53 and navigation changed to network-first for easier GitHub Pages updates.

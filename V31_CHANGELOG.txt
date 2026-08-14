@@ -1,0 +1,5 @@
+V31
+- Fixed full-case backup so final evaluator/expert/manager comments are synchronized directly from their textareas immediately before JSON creation.
+- Added finalComments to the base state and explicit restore merging.
+- Backup format version raised to 6 and includes a top-level finalComments copy for backward/forward robustness.
+- Final evaluator comment is also synchronized before finalization.

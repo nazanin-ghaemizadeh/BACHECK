@@ -1,0 +1,26 @@
+/* v15 — balanced expert/manager desktop action headers. */
+@media (min-width:1181px){
+  /* Expert: 3 equal controls on row one, 2 wider equal controls on row two. */
+  body.expertMode .headerActions .actionCard{
+    grid-template-columns:repeat(6,minmax(0,1fr))!important;
+  }
+  body.expertMode .headerActions .actionCard > #backupButton,
+  body.expertMode .headerActions .actionCard .expertHeaderActions > #expertResetButton,
+  body.expertMode .headerActions .actionCard .expertHeaderActions > #expertConfirmButton{
+    grid-column:span 2!important;
+  }
+  body.expertMode .headerActions .actionCard .expertHeaderActions > #expertExcelButton,
+  body.expertMode .headerActions .actionCard > #switchRoleButton{
+    grid-column:span 3!important;
+  }
+
+  /* Manager: 2 x 2 balanced layout; dashboard Excel moves to the lower row. */
+  body.managerMode .headerActions .actionCard{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+  body.managerMode .headerActions .actionCard > #backupButton{grid-column:1!important;grid-row:1!important}
+  body.managerMode .headerActions .actionCard > .button{grid-column:2!important;grid-row:1!important}
+  body.managerMode .headerActions .actionCard > #managerExcelButton{grid-column:1!important;grid-row:2!important}
+  body.managerMode .headerActions .actionCard > #switchRoleButton{grid-column:2!important;grid-row:2!important}
+  body.managerMode .headerActions .actionCard > #unlockAssessmentButton:not([hidden]){grid-column:1 / -1!important;grid-row:3!important}
+}
