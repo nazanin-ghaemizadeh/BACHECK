@@ -1,5 +1,0 @@
-V47
-- Evaluator Excel: removed weight/weighted-score columns from first sheet, added evaluator final comment, added Four Vehicle Views sheet.
-- Expert Excel: download is available when weights are valid/complete without requiring final confirmation; expert final comment is included.
-- Management Excel: includes evaluator/expert/management final comments, Four Vehicle Views, and multi-vehicle comparison tables + radar charts when comparison cases are loaded.
-- Comparison workspace: asks how many vehicles (1–5) to compare with the current vehicle, provides one JSON slot per vehicle, and supports multi-vehicle score cards, management-style radar charts, and comparison table.

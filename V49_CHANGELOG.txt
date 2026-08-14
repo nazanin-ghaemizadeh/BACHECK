@@ -1,5 +1,0 @@
-v49 final changes
-- Added Evaluator lock/permission status banner above the assessment form.
-- Locked Evaluator cases remain browseable while all case-mutating controls remain read-only.
-- Expert Excel export stays available in a locked case whenever all weights are complete and total exactly 1.
-- Rewrote the Persian and English User Guide to match the current authentication, role permissions, locking/revision workflow, full JSON backup, Excel outputs, and 1–5 vehicle comparison workflow.

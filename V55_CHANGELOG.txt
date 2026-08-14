@@ -1,5 +1,0 @@
-BAMCO Vehicle Assessment Mobile v55
-
-- Persian and English user guides now have matching structure.
-- Added the missing English workflow flowchart with the same nodes and sequence as the Persian guide.
-- Updated PWA cache version to v55 so GitHub Pages/mobile clients receive the revised guide.
