@@ -1,0 +1,6 @@
+V50
+- Header controls in Evaluator, Expert, and Management panels are presented as one horizontal swipeable row below the brand header.
+- Existing button styling, visibility, and behavior are preserved.
+- Persian UI language button: «زبان انگلیسی».
+- English UI language button: “Persian Language”.
+- Login language control uses the same labels.

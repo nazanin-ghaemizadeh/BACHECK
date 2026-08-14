@@ -1,0 +1,9 @@
+v32
+- Updated Persian and English Ownership Cost subgroup wording.
+- English instruction callout accent moved to the left; Persian remains on the right.
+- All instruction callout text is justified in both languages.
+- Evidence attachments can be removed immediately after upload via delegated remove handling.
+- Locked cases now block upload/remove evidence controls and vehicle photo add/change/remove controls.
+- Reopen-for-editing button is explicitly bilingual.
+- Evaluator Switch Role expands across the full action row when the reopen button creates an extra row.
+- Added a Management-only applied revision history card, shown after actual post-reopen changes, recording editor name, reason, date, and time.

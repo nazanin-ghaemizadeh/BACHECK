@@ -1,0 +1,6 @@
+V52
+- Preserved each role's original action-button set exactly; no role receives additional controls.
+- Fixed unified styling so hidden role-specific controls remain hidden.
+- Moved the language control out of the panel action strip and back into the blue header as a global utility.
+- Kept identical action-button dimensions and the horizontal swipe/scroll layout below the header.
+- Language labels remain: Persian UI = «زبان انگلیسی»; English UI = “Persian Language”.

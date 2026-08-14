@@ -1,0 +1,9 @@
+V40 — Full-case JSON backup + second vehicle comparison
+
+- Full-case backup no longer depends on a successful localStorage write; large image-heavy cases can still download as JSON.
+- Backup download now uses an attached temporary anchor for more reliable file:// browser behavior.
+- Management includes a second-vehicle JSON upload section.
+- Accepts both full-case backup JSON and regular vehicle-assessment JSON.
+- Comparison uses the same currently active management weights for both vehicles.
+- Shows overall score, completion, all 15 criterion averages, and Vehicle 2 minus Vehicle 1 differences.
+- The second comparison file is kept as a small session snapshot without attachments or photos.
