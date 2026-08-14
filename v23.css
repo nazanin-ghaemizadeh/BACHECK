@@ -1,0 +1,49 @@
+/* v23 — Management Persian heh cleanup, bounded raw frequency labels, expert Excel state */
+.managerMode .actionCard:before{
+  content:'حالت مدیریت: مشاهده نتایج و گزارش‌ها'!important;
+}
+
+/* The number shown after each bar is the actual frequency and never leaves the track. */
+.qualityBar .qualityTrack{
+  position:relative!important;
+  overflow:hidden!important;
+}
+.qualityBar .qualityCount{
+  position:absolute!important;
+  top:50%!important;
+  left:clamp(5px,calc(var(--quality-count-position) + 8px),calc(100% - 38px))!important;
+  transform:translateY(-50%)!important;
+  min-width:28px!important;
+  max-width:34px!important;
+  padding:1px 4px!important;
+  border-radius:5px!important;
+  background:rgba(255,255,255,.96)!important;
+  box-shadow:0 1px 4px #163b6920!important;
+  color:#111827!important;
+  font-size:14px!important;
+  line-height:1.4!important;
+  font-weight:800!important;
+  text-align:center!important;
+  white-space:nowrap!important;
+  overflow:visible!important;
+  direction:ltr!important;
+}
+.english .qualityBar .qualityCount{font-family:"Times New Roman",Times,serif!important}
+
+/* Make the expert Excel control unmistakably inactive before final confirmation. */
+body.expertMode #expertExcelButton:disabled{
+  background:#7f8c99!important;
+  border-color:#7f8c99!important;
+  color:#e8edf2!important;
+  opacity:.52!important;
+  filter:grayscale(1)!important;
+  cursor:not-allowed!important;
+  pointer-events:none!important;
+}
+body.expertMode #expertExcelButton:not(:disabled){
+  background:#08734b!important;
+  color:#fff!important;
+  opacity:1!important;
+  filter:none!important;
+  cursor:pointer!important;
+}

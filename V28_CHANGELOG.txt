@@ -1,0 +1,9 @@
+V28 — Live Manager Excel synchronization
+
+- Manager Excel export now recalculates all rows from the current live assessment state at click time.
+- Active weights are normalized with the same logic used by the dashboard update() function.
+- Final score in Excel follows the live dashboard partial/completed-weight calculation.
+- Excel weighted bar chart now mirrors the dashboard weighted visual calculation.
+- Excel quality distribution now counts scores only from criteria with active (non-zero) weight.
+- Excel radar chart now mirrors the dashboard weighted radar calculation and suppresses zero labels.
+- A fresh workbook and fresh chart images are generated on every export click; no previous chart snapshot is reused.
