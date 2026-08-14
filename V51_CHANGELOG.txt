@@ -1,0 +1,6 @@
+V51
+- Restored BAMCO logo and system title to their original position inside the blue header.
+- Moved all role action buttons to a separate strip immediately below the header.
+- Unified button width, height, border, radius, typography, and spacing across Evaluator, Expert, and Management panels.
+- Preserved a single horizontally swipeable row on smaller screens.
+- Kept the descriptive language labels introduced in V50.

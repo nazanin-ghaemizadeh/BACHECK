@@ -1,0 +1,32 @@
+{
+  "id": "./index.html",
+  "name": "BACHECK",
+  "short_name": "BACHECK",
+  "description": "BAMCO offline vehicle assessment system",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "./index.html?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone"
+  ],
+  "background_color": "#f4f8fb",
+  "theme_color": "#163b69",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "./bacheck-app-icon-20260814-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./bacheck-app-icon-20260814-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

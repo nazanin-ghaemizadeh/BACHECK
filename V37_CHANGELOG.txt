@@ -1,0 +1,5 @@
+v37
+- Removed repeated locked-case alerts during login/startup; locked state is enforced silently.
+- Revision logging no longer depends on legacy everFinalized metadata; any real change made during a reopen edit session is logged.
+- Reopening now explicitly marks the case as previously finalized for backward compatibility.
+- Red manager weight-file error blocks are hidden while validation and approval blocking remain active.

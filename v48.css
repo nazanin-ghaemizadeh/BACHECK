@@ -1,0 +1,27 @@
+/* v48 — localized comparison denominator + read-only evaluator navigation */
+/* A finalized evaluator case stays fully browseable: criteria and view-only photo tabs remain interactive. */
+.caseLocked:not(.caseAuthorizedEdit) .assessmentLayout .criterionTab,
+.caseLocked:not(.caseAuthorizedEdit) #evaluatorVehiclePhotos .vehicleGalleryThumb{
+  pointer-events:auto!important;
+  opacity:1!important;
+  cursor:pointer!important;
+}
+.caseLocked:not(.caseAuthorizedEdit) .assessmentLayout .criterionTab:disabled,
+.caseLocked:not(.caseAuthorizedEdit) #evaluatorVehiclePhotos .vehicleGalleryThumb:disabled{
+  pointer-events:auto!important;
+  opacity:1!important;
+  cursor:pointer!important;
+}
+.caseLocked:not(.caseAuthorizedEdit) .assessmentLayout details > summary{
+  pointer-events:auto!important;
+  opacity:1!important;
+  cursor:pointer!important;
+}
+/* Mutating controls remain visually read-only while the case is locked. */
+.caseLocked:not(.caseAuthorizedEdit) .assessmentLayout [data-score]:disabled,
+.caseLocked:not(.caseAuthorizedEdit) .assessmentLayout [data-note]:disabled,
+.caseLocked:not(.caseAuthorizedEdit) [data-final-comment="evaluator"]:disabled,
+.caseLocked:not(.caseAuthorizedEdit) .metadata input:disabled,
+.caseLocked:not(.caseAuthorizedEdit) .metadata select:disabled{
+  cursor:not-allowed!important;
+}

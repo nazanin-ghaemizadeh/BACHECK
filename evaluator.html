@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="fa">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="#163b69" name="theme-color"/>
+<title>سامانه ارزیابی خودرو | Vehicle Assessment System</title>
+<link href="styles.css" rel="stylesheet"/>
+<link href="executive.css" rel="stylesheet"/>
+<link href="refinement.css" rel="stylesheet"/>
+<link href="polished.css" rel="stylesheet"/>
+<link href="expert.css" rel="stylesheet"/>
+<link href="manager.css" rel="stylesheet"/>
+<link href="manager-icon-fix.css" rel="stylesheet"/>
+<link href="v14.css" rel="stylesheet"/>
+<link href="guide.css" rel="stylesheet"/>
+<link href="manifest.webmanifest" rel="manifest"/><link href="bacheck-apple-touch-20260814.png" rel="apple-touch-icon"/><link href="bacheck-favicon-20260814.png" rel="icon" sizes="64x64" type="image/png"/><meta content="BACHECK" name="application-name"/><meta content="BACHECK" name="apple-mobile-web-app-title"/><meta content="yes" name="apple-mobile-web-app-capable"/><meta content="yes" name="mobile-web-app-capable"/><meta content="default" name="apple-mobile-web-app-status-bar-style"/><link href="bacheck-universal.css" rel="stylesheet"/><style id="bacheckRolePrehide">#entryScreen,#appShell{display:none!important}</style></head>
+<body data-bacheck-role="evaluator">
+<section aria-label="ورود به سامانه" class="entryScreen" data-i18n-aria="entryAria" id="entryScreen">
+<div class="entryCard">
+<button aria-label="تغییر زبان" class="entryLanguageButton" id="entryLanguageButton" type="button">زبان انگلیسی</button>
+<div class="entryBrand"><img alt="لوگوی خودروسازان بم" data-i18n-alt="logoAlt" src="bamco-logo.png"/><div><strong data-i18n="brand">خودروسازان بم</strong><span data-i18n="entrySystem">سامانه ارزیابی خودرو</span></div></div>
+<div aria-label="بخش‌های صفحه ورود" class="entryTabs" role="tablist">
+<button aria-controls="entryLoginPanel" aria-selected="true" class="entryTabButton active" data-entry-tab="login" id="entryLoginTab" role="tab" type="button"><span class="guideFa">ورود به سامانه</span><span class="guideEn">Sign in</span></button>
+<button aria-controls="entryGuidePanel" aria-selected="false" class="entryTabButton" data-entry-tab="guide" id="entryGuideTab" role="tab" type="button"><span class="guideFa">راهنمای استفاده</span><span class="guideEn">User Guide</span></button>
+</div>
+<div aria-labelledby="entryLoginTab" class="entryTabPanel" id="entryLoginPanel" role="tabpanel">
+<div class="entryIntro"><h1 data-i18n="entryWelcome">به سامانه ارزیابی خودرو خوش آمدید</h1><p id="entryAuthPrompt">برای ورود، نام کاربری و رمز عبور را وارد کنید.</p></div>
+<form autocomplete="on" class="entryAuthForm" id="entryAuthForm">
+<label><span id="authUsernameLabel">نام کاربری</span><input autocomplete="username" dir="ltr" id="authUsername" name="username" required="" type="email"/></label>
+<label><span id="authPasswordLabel">رمز عبور</span><input autocomplete="current-password" dir="ltr" id="authPassword" name="password" required="" type="password"/></label>
+<button id="authLoginButton" type="submit">ورود</button>
+<div aria-live="polite" class="entryAuthMessage" id="entryAuthMessage" role="status"></div>
+</form>
+<div class="entryAuthenticatedBar" hidden="" id="entryAuthenticatedBar"><span id="entryAuthenticatedUser"></span><button id="entrySignOutButton" type="button">خروج از حساب</button></div>
+<div class="roleChoices" hidden="" id="entryRoleChoices">
+<button class="roleChoice evaluatorRole" data-role="evaluator" type="button"><span class="roleIcon">✓</span><strong data-i18n="enterEvaluator">ورود ارزیاب</strong><small data-i18n="evaluatorRoleDesc">ثبت اطلاعات، چک‌لیست، امتیازها و تصاویر مستند</small></button>
+<button class="roleChoice expertRole" data-role="expert" type="button"><span class="roleIcon">◇</span><strong data-i18n="enterExpert">ورود خبره</strong><small data-i18n="expertRoleDesc">ثبت اطلاعات تخصصی و تعیین وزن شاخص‌های اصلی</small></button>
+<button class="roleChoice managerRole" data-role="manager" type="button"><span class="roleIcon">▦</span><strong data-i18n="enterManager">ورود مدیریت</strong><small data-i18n="managerRoleDesc">مشاهده داشبورد، نتایج و گزارش مدیریتی</small></button>
+</div>
+</div>
+<section aria-labelledby="entryGuideTab" class="entryGuidePanel entryTabPanel" hidden="" id="entryGuidePanel" role="tabpanel">
+<div class="guideLang guideFa" dir="rtl">
+<div class="guideHero">
+<h1>راهنمای استفاده از سامانه ارزیابی خودرو</h1>
+<p>این سامانه یک ابزار آفلاین و یکپارچه برای ثبت ارزیابی فنی خودرو، وزن‌دهی تخصصی شاخص‌ها، تحلیل مدیریتی، کنترل اصلاحات و مقایسه چند خودرو است. داده‌های ارزیاب، نظر و وزن‌های خبره و خروجی‌های مدیریتی در یک پرونده واحد نگهداری می‌شوند؛ در ادامه، نحوه کار هر نقش و مسیر کامل پرونده توضیح داده شده است.</p>
+</div>
+<nav aria-label="دسترسی سریع راهنما" class="guideQuickNav">
+<a href="#guide-fa-overview">گردش کار</a><a href="#guide-fa-evaluator">ارزیاب</a><a href="#guide-fa-expert">خبره</a><a href="#guide-fa-manager">مدیریت</a><a href="#guide-fa-backup">پشتیبان و مقایسه</a>
+</nav>
+<section class="guideSection" id="guide-fa-overview">
+<div class="guideSectionHead"><span class="guideSectionIcon workflowIcon">↻</span><div><h2>ورود، نقش‌ها و گردش کلی پرونده</h2><p>هر کاربر ابتدا با نام کاربری و رمز عبور وارد می‌شود و فقط نقش‌های مجاز حساب خود را می‌بیند.</p></div></div>
+<div class="guideOverviewGrid">
+<article class="guideRoleTile evaluator"><strong>ارزیاب</strong><p>مشخصات خودرو و ارزیاب، چهار نمای خودرو، امتیازهای ۱ تا ۱۰، یادداشت‌ها، مستندات و نظر نهایی را ثبت می‌کند و پس از تکمیل پرونده آن را قفل می‌کند.</p></article>
+<article class="guideRoleTile expert"><strong>خبره</strong><p>اطلاعات تخصصی، وزن ۱۵ شاخص اصلی و نظر نهایی خبره را ثبت می‌کند. مجموع وزن‌ها باید دقیقاً برابر ۱ باشد.</p></article>
+<article class="guideRoleTile manager"><strong>مدیریت</strong><p>داشبورد و نتایج را مشاهده می‌کند، وزن‌های فعال را کنترل می‌کند، مجوز اصلاح صادر می‌کند، سوابق اصلاحات را می‌بیند و مقایسه چند خودرو را انجام می‌دهد.</p></article>
+</div>
+<figure aria-label="گردش کار پرونده" class="guideFlow">
+<div class="guideFlowNode"><b>ورود و انتخاب نقش</b><small>براساس دسترسی حساب</small></div><div class="guideFlowArrow">→</div>
+<div class="guideFlowBranch"><div class="guideFlowNode branch"><b>ارزیابی</b><small>امتیاز، مستندات، عکس و نظر نهایی</small></div><div class="guideFlowNode merge"><b>وزن‌دهی خبره</b><small>وزن ۱۵ شاخص و نظر خبره</small></div></div><div class="guideFlowArrow">→</div>
+<div class="guideFlowNode final"><b>مدیریت</b><small>تحلیل، مجوز اصلاح، مقایسه و خروجی</small></div><div class="guideFlowArrow">→</div>
+<div class="guideFlowNode"><b>پشتیبان کامل</b><small>JSON قابل بازیابی</small></div>
+</figure>
+<div class="guideCallout"><strong>تغییر نقش:</strong> فقط نمای سامانه را بین نقش‌های مجاز همان کاربر عوض می‌کند و اطلاعات پرونده حذف نمی‌شود. گزینه «شروع ارزیابی جدید» فقط در پنل ارزیاب در دسترس است و برای ایجاد پرونده یک خودروی جدید استفاده می‌شود.</div>
+</section>
+<section class="guideSection" id="guide-fa-evaluator">
+<div class="guideSectionHead"><span class="guideSectionIcon">✓</span><div><h2>پنل ارزیاب</h2><p>مرجع ثبت داده خام ارزیابی خودرو است.</p></div></div>
+<div class="guideSteps">
+<article class="guideStep"><span class="guideStepNum">۱</span><h3>اطلاعات ارزیابی</h3><p>نام و سابقه ارزیاب، تماس و ایمیل، تاریخ، برند، مدل، شماره شاسی و کارکرد را ثبت کنید.</p></article>
+<article class="guideStep"><span class="guideStepNum">۲</span><h3>چهار نمای خودرو</h3><p>نمای جلو، عقب، چپ و راست را اضافه کنید. این تصاویر در پشتیبان کامل، مدیریت و خروجی اکسل مربوطه استفاده می‌شوند.</p></article>
+<article class="guideStep"><span class="guideStepNum">۳</span><h3>امتیازدهی و مستندات</h3><p>برای هر آیتم امتیاز ۱ تا ۱۰ ثبت کنید. یادداشت و فایل مستند را در همان آیتم اضافه یا حذف کنید. درصد تکمیل به‌صورت زنده به‌روزرسانی می‌شود.</p></article>
+<article class="guideStep"><span class="guideStepNum">۴</span><h3>نظر نهایی ارزیاب</h3><p>جمع‌بندی نهایی را ثبت کنید. این نظر در مدیریت، پشتیبان کامل و خروجی‌های مرتبط نگهداری می‌شود.</p></article>
+<article class="guideStep"><span class="guideStepNum">۵</span><h3>تأیید نهایی و قفل</h3><p>پس از پاسخ‌دادن به تمام آیتم‌ها، «تأیید نهایی و قفل پرونده» را بزنید. پس از قفل، داده‌ها قابل تغییر نیستند.</p></article>
+<article class="guideStep"><span class="guideStepNum">۶</span><h3>مشاهده پرونده قفل‌شده</h3><p>در حالت قفل، شاخص‌ها و زیرشاخص‌ها همچنان باز و بسته می‌شوند و امتیازها، یادداشت‌ها، مستندات و تصاویر قبلی قابل مشاهده‌اند؛ اما هیچ داده‌ای قابل تغییر نیست. بالای فرم وضعیت قفل نمایش داده می‌شود.</p></article>
+<article class="guideStep"><span class="guideStepNum">۷</span><h3>اصلاح پس از قفل</h3><p>فقط مدیریت می‌تواند برای یک کاربر مشخص و در نقش «ارزیاب» مجوز اصلاح صادر کند. تنها همان کاربر در همان نقش امکان ویرایش خواهد داشت. پس از پایان اصلاح، ارزیاب دوباره پرونده را تأیید و قفل می‌کند.</p></article>
+</div>
+<h3>خروجی اکسل ارزیاب</h3>
+<div class="guideToolbar">
+<div class="guideTool"><strong>شیت اصلی</strong><span>اطلاعات ارزیابی، میانگین شاخص‌ها و نظر نهایی ارزیاب را در یک نمای خلاصه نگهداری می‌کند.</span></div>
+<div class="guideTool"><strong>چهار نمای خودرو</strong><span>یک شیت جداگانه برای تصاویر جلو، عقب، چپ و راست ایجاد می‌شود.</span></div>
+<div class="guideTool"><strong>جزئیات</strong><span>امتیاز آیتم‌ها، یادداشت‌ها و اطلاعات مستندات در شیت‌های جزئیات نگهداری می‌شوند.</span></div>
+</div>
+</section>
+<section class="guideSection" id="guide-fa-expert">
+<div class="guideSectionHead"><span class="guideSectionIcon">◇</span><div><h2>پنل خبره</h2><p>برای تعیین اهمیت نسبی ۱۵ شاخص اصلی و ثبت نظر تخصصی استفاده می‌شود.</p></div></div>
+<div class="guideSteps">
+<article class="guideStep"><span class="guideStepNum">۱</span><h3>اطلاعات خبره</h3><p>نام، تخصص، سمت، سازمان، سابقه، تماس، ایمیل و تاریخ تکمیل را ثبت کنید.</p></article>
+<article class="guideStep"><span class="guideStepNum">۲</span><h3>وزن‌ها</h3><p>وزن هر ۱۵ شاخص را وارد کنید. مجموع باید دقیقاً ۱ باشد. وزن پیش‌فرض هر شاخص ۱/۱۵ است.</p></article>
+<article class="guideStep"><span class="guideStepNum">۳</span><h3>تأیید نهایی خبره</h3><p>با معتبر بودن وزن‌ها، تأیید نهایی وزن‌های خبره را برای مدیریت فعال می‌کند. اگر خبره با مجوز اصلاح وارد پرونده قفل‌شده شده باشد، تأیید اصلاحات مجوز همان جلسه را خاتمه می‌دهد.</p></article>
+<article class="guideStep"><span class="guideStepNum">۴</span><h3>حالت قفل</h3><p>در پرونده قفل‌شده، فرم خبره فقط خواندنی است مگر مدیریت دقیقاً برای همان کاربر در نقش خبره مجوز اصلاح صادر کند. وضعیت مجوز بالای پنل خبره نمایش داده می‌شود.</p></article>
+<article class="guideStep"><span class="guideStepNum">۵</span><h3>خروجی اکسل خبره</h3><p>هر زمان تمام وزن‌ها وارد شده باشند و مجموع دقیقاً ۱ باشد، خروجی اکسل قابل دریافت است؛ حتی اگر پرونده قفل باشد. نظر نهایی خبره نیز در فایل اکسل درج می‌شود.</p></article>
+</div>
+</section>
+<section class="guideSection" id="guide-fa-manager">
+<div class="guideSectionHead"><span class="guideSectionIcon">▦</span><div><h2>پنل مدیریت</h2><p>مرکز تحلیل، کنترل وزن‌ها، مدیریت اصلاحات، مقایسه خودروها و گزارش نهایی است.</p></div></div>
+<div class="guideSteps">
+<article class="guideStep"><span class="guideStepNum">۱</span><h3>داشبورد و امتیاز نهایی</h3><p>مشخصات پرونده، تکمیل ارزیابی، میانگین شاخص‌ها، وزن فعال، سهم در امتیاز نهایی، نمودارها، نقاط قوت و ضعف و نظرات ارزیاب/خبره نمایش داده می‌شوند.</p></article>
+<article class="guideStep"><span class="guideStepNum">۲</span><h3>وزن فعال</h3><p>اولویت وزن‌ها: فایل وزن مدیریتیِ تأییدشده، سپس وزن تأییدشده خبره، و در نبود آن‌ها وزن‌های برابر. حذف فایل مدیریتی، سیستم را به وزن خبره یا پیش‌فرض برمی‌گرداند.</p></article>
+<article class="guideStep"><span class="guideStepNum">۳</span><h3>صدور مجوز اصلاح</h3><p>در پرونده قفل‌شده، مدیریت «نقش»، «کاربر دریافت‌کننده» و «دلیل اصلاح» را مشخص می‌کند. مجوز به ترکیب کاربر + نقش + پرونده وابسته است و برای کاربر دیگری قابل استفاده نیست.</p></article>
+<article class="guideStep"><span class="guideStepNum">۴</span><h3>سوابق اصلاحات</h3><p>در انتهای پنل مدیریت، نام کاربر، نقش ارزیاب/خبره، دلیل، تاریخ و ساعت مجوز/اصلاح ثبت می‌شود. این سوابق در پشتیبان کامل نیز نگهداری می‌شوند.</p></article>
+<article class="guideStep"><span class="guideStepNum">۵</span><h3>مقایسه چند خودرو</h3><p>از بخش مقایسه، ابتدا تعداد خودروهای مقایسه‌ای را از ۱ تا ۵ مشخص کنید و سپس فایل JSON هر خودرو را بارگذاری کنید. برای هر خودرو رادار مستقل و جدول مقایسه با اختلاف نسبت به خودروی فعلی نمایش داده می‌شود.</p></article>
+<article class="guideStep"><span class="guideStepNum">۶</span><h3>اکسل مدیریت</h3><p>خروجی مدیریت شامل داشبورد، امتیازها و وزن‌ها، نظر نهایی ارزیاب، خبره و مدیریت و چهار نمای خودرو است. اگر خودروهای مقایسه‌ای بارگذاری شده باشند، جدول و نمودارهای مقایسه نیز در فایل اکسل اضافه می‌شوند.</p></article>
+</div>
+<h3>طبقه‌بندی نتیجه</h3>
+<div class="guideDecision"><div class="pass"><strong>۸۵-۱۰۰</strong><span>عبور مقدماتی</span><small>ادامه بررسی‌های اقتصادی و صنعتی‌سازی</small></div><div class="conditional"><strong>۷۵-۸۵</strong><span>عبور مشروط</span><small>ادامه پس از برنامه اصلاحی</small></div><div class="revise"><strong>۶۵-۷۵</strong><span>اصلاح و ارزیابی مجدد</span><small>توقف تا اجرای اصلاحات</small></div><div class="reject"><strong>کمتر از ۶۵</strong><span>رد مقدماتی</span><small>عدم توصیه برای ادامه فرایند</small></div></div>
+</section>
+<section class="guideSection" id="guide-fa-backup">
+<div class="guideSectionHead"><span class="guideSectionIcon">⇩</span><div><h2>پشتیبان کامل، بازیابی و نکات مهم</h2><p>برای انتقال پرونده بین دستگاه‌ها یا نگهداری نسخه قابل بازیابی از JSON استفاده کنید.</p></div></div>
+<div class="guideSteps">
+<article class="guideStep"><span class="guideStepNum">۱</span><h3>پشتیبان کامل JSON</h3><p>امتیازها، متادیتا، یادداشت‌ها، مستندات، چهار تصویر خودرو، نظرهای نهایی، اطلاعات و وزن‌های خبره، وزن مدیریتی، وضعیت قفل/مجوز و سوابق اصلاحات را ذخیره می‌کند.</p></article>
+<article class="guideStep"><span class="guideStepNum">۲</span><h3>باز کردن پرونده</h3><p>از «باز کردن پرونده» برای بازیابی Full Case Backup استفاده کنید. نقش و وضعیت قفل پرونده پس از بازیابی مطابق اطلاعات ذخیره‌شده اعمال می‌شود.</p></article>
+<article class="guideStep"><span class="guideStepNum">۳</span><h3>نام فایل‌ها</h3><p>نام تمام فایل‌های خروجی به انگلیسی ساخته می‌شود تا در سیستم‌های مختلف سازگاری بیشتری داشته باشد؛ محتوای فایل براساس زبان رابط فارسی یا انگلیسی است.</p></article>
+</div>
+<div class="guideCallout warning"><strong>پیشنهاد:</strong> قبل از شروع ارزیابی جدید، قبل از انتقال پرونده به دستگاه دیگر و قبل از اصلاحات مهم یک پشتیبان کامل JSON بگیرید.</div>
+</section>
+</div>
+<div class="guideLang guideEn" dir="ltr">
+<div class="guideHero">
+<h1>Vehicle Assessment System User Guide</h1>
+<p>This system is an integrated offline tool for recording technical vehicle assessments, expert weighting of criteria, management analysis, revision control, and multi-vehicle comparison. Evaluator data, Expert comments and weights, and Management outputs are stored in a single case; the sections below explain how each role works and the complete case workflow.</p>
+</div>
+<nav aria-label="Guide shortcuts" class="guideQuickNav">
+<a href="#guide-en-overview">Workflow</a><a href="#guide-en-evaluator">Evaluator</a><a href="#guide-en-expert">Expert</a><a href="#guide-en-manager">Management</a><a href="#guide-en-backup">Backup &amp; comparison</a>
+</nav>
+<section class="guideSection" id="guide-en-overview">
+<div class="guideSectionHead"><span class="guideSectionIcon workflowIcon">↻</span><div><h2>Sign-in, roles, and overall case workflow</h2><p>Each user first signs in with a username and password and sees only the roles authorized for that account.</p></div></div>
+<div class="guideOverviewGrid">
+<article class="guideRoleTile evaluator"><strong>Evaluator</strong><p>Records vehicle and evaluator information, four vehicle views, 1–10 scores, notes, evidence, and the final comment, then locks the case after completion.</p></article>
+<article class="guideRoleTile expert"><strong>Expert</strong><p>Records professional information, weights for the 15 main criteria, and the Expert final comment. The total of all weights must equal exactly 1.</p></article>
+<article class="guideRoleTile manager"><strong>Management</strong><p>Views the dashboard and results, controls active weights, grants revision permission, reviews revision history, and compares multiple vehicles.</p></article>
+</div>
+<figure aria-label="Case workflow" class="guideFlow">
+<div class="guideFlowNode"><b>Sign in and select role</b><small>Based on account access</small></div><div class="guideFlowArrow">→</div>
+<div class="guideFlowBranch"><div class="guideFlowNode branch"><b>Assessment</b><small>Scores, evidence, photos, and final comment</small></div><div class="guideFlowNode merge"><b>Expert weighting</b><small>15 criterion weights and Expert comment</small></div></div><div class="guideFlowArrow">→</div>
+<div class="guideFlowNode final"><b>Management</b><small>Analysis, revision permission, comparison, and output</small></div><div class="guideFlowArrow">→</div>
+<div class="guideFlowNode"><b>Full backup</b><small>Restorable JSON</small></div>
+</figure>
+<div class="guideCallout"><strong>Switch Role:</strong> only changes the system view between roles authorized for the same user and does not delete case data. “Start New Assessment” is available only in the Evaluator panel and is used to create a case for a new vehicle.</div>
+</section>
+<section class="guideSection" id="guide-en-evaluator">
+<div class="guideSectionHead"><span class="guideSectionIcon">✓</span><div><h2>Evaluator panel</h2><p>The source for recording raw vehicle-assessment data.</p></div></div>
+<div class="guideSteps">
+<article class="guideStep"><span class="guideStepNum">1</span><h3>Assessment information</h3><p>Enter the evaluator’s name and experience, contact details and email, date, vehicle brand, model, VIN, and odometer reading.</p></article>
+<article class="guideStep"><span class="guideStepNum">2</span><h3>Four vehicle views</h3><p>Add front, rear, left, and right views. These images are used in the full backup, Management, and the related Excel output.</p></article>
+<article class="guideStep"><span class="guideStepNum">3</span><h3>Scoring and evidence</h3><p>Enter a score from 1 to 10 for each item. Add or remove notes and evidence files within the same item. The completion percentage updates live.</p></article>
+<article class="guideStep"><span class="guideStepNum">4</span><h3>Evaluator final comment</h3><p>Record the final conclusion. This comment is retained in Management, the full backup, and related outputs.</p></article>
+<article class="guideStep"><span class="guideStepNum">5</span><h3>Final confirmation and lock</h3><p>After answering all items, click “Finalize and Lock Assessment.” After the case is locked, the data cannot be changed.</p></article>
+<article class="guideStep"><span class="guideStepNum">6</span><h3>View a locked case</h3><p>When locked, criteria and subcriteria can still be expanded and collapsed, and previous scores, notes, evidence, and images remain viewable; however, no data can be changed. The lock status is displayed above the form.</p></article>
+<article class="guideStep"><span class="guideStepNum">7</span><h3>Revision after locking</h3><p>Only Management can grant revision permission to a specific user in the “Evaluator” role. Only that same user in that role can edit the case. After completing the revision, the Evaluator confirms and locks the case again.</p></article>
+</div>
+<h3>Evaluator Excel Output</h3>
+<div class="guideToolbar">
+<div class="guideTool"><strong>Main sheet</strong><span>Keeps assessment information, criterion averages, and the Evaluator final comment in one summary view.</span></div>
+<div class="guideTool"><strong>Four vehicle views</strong><span>A separate sheet is created for the front, rear, left, and right images.</span></div>
+<div class="guideTool"><strong>Details</strong><span>Item scores, notes, and evidence information are retained in the detail sheets.</span></div>
+</div>
+</section>
+<section class="guideSection" id="guide-en-expert">
+<div class="guideSectionHead"><span class="guideSectionIcon">◇</span><div><h2>Expert panel</h2><p>Used to define the relative importance of the 15 main criteria and record the expert opinion.</p></div></div>
+<div class="guideSteps">
+<article class="guideStep"><span class="guideStepNum">1</span><h3>Expert information</h3><p>Enter name, specialty, position, organization, experience, contact details, email, and completion date.</p></article>
+<article class="guideStep"><span class="guideStepNum">2</span><h3>Weights</h3><p>Enter the weight of all 15 criteria. The total must equal exactly 1. The default weight for each criterion is 1/15.</p></article>
+<article class="guideStep"><span class="guideStepNum">3</span><h3>Expert final confirmation</h3><p>When the weights are valid, final confirmation makes the Expert weights available to Management. If the Expert entered a locked case with revision permission, confirming the revisions ends that session’s permission.</p></article>
+<article class="guideStep"><span class="guideStepNum">4</span><h3>Locked state</h3><p>In a locked case, the Expert form is read-only unless Management grants revision permission specifically to that same user in the Expert role. Permission status is displayed above the Expert panel.</p></article>
+<article class="guideStep"><span class="guideStepNum">5</span><h3>Expert Excel output</h3><p>Whenever all weights have been entered and their total equals exactly 1, the Excel output can be generated, even if the case is locked. The Expert final comment is also included in the Excel file.</p></article>
+</div>
+</section>
+<section class="guideSection" id="guide-en-manager">
+<div class="guideSectionHead"><span class="guideSectionIcon">▦</span><div><h2>Management panel</h2><p>The central area for analysis, weight control, revision management, vehicle comparison, and final reporting.</p></div></div>
+<div class="guideSteps">
+<article class="guideStep"><span class="guideStepNum">1</span><h3>Dashboard and final score</h3><p>Case information, assessment completion, criterion averages, active weights, contribution to the final score, charts, strengths and weaknesses, and Evaluator/Expert comments are displayed.</p></article>
+<article class="guideStep"><span class="guideStepNum">2</span><h3>Active weights</h3><p>Weight priority is: an approved Management weight file, then confirmed Expert weights, and equal weights if neither is available. Removing the Management file returns the system to Expert or default weights.</p></article>
+<article class="guideStep"><span class="guideStepNum">3</span><h3>Grant revision permission</h3><p>For a locked case, Management specifies the “role,” “receiving user,” and “revision reason.” Permission is tied to the combination of user + role + case and cannot be used by another user.</p></article>
+<article class="guideStep"><span class="guideStepNum">4</span><h3>Revision history</h3><p>At the end of the Management panel, the user name, Evaluator/Expert role, reason, date, and time of the permission/revision are recorded. These records are also retained in the full backup.</p></article>
+<article class="guideStep"><span class="guideStepNum">5</span><h3>Compare multiple vehicles</h3><p>In the comparison section, first select 1 to 5 comparison vehicles, then load the JSON file for each vehicle. A separate radar chart is displayed for each vehicle, together with a comparison table showing differences from the current vehicle.</p></article>
+<article class="guideStep"><span class="guideStepNum">6</span><h3>Management Excel</h3><p>The Management output includes the dashboard, scores and weights, the final comments from the Evaluator, Expert, and Management, and the four vehicle views. If comparison vehicles have been loaded, the comparison table and charts are also added to the Excel file.</p></article>
+</div>
+<h3>Result classification</h3>
+<div class="guideDecision"><div class="pass"><strong>85-100</strong><span>Preliminary pass</span><small>Continue economic and industrialization reviews</small></div><div class="conditional"><strong>75-85</strong><span>Conditional pass</span><small>Continue after a corrective plan</small></div><div class="revise"><strong>65-75</strong><span>Revise and reassess</span><small>Pause until corrections are implemented</small></div><div class="reject"><strong>Below 65</strong><span>Preliminary rejection</span><small>Further continuation is not recommended</small></div></div>
+</section>
+<section class="guideSection" id="guide-en-backup">
+<div class="guideSectionHead"><span class="guideSectionIcon">⇩</span><div><h2>Full backup, restore, and important notes</h2><p>Use JSON to transfer a case between devices or keep a restorable copy.</p></div></div>
+<div class="guideSteps">
+<article class="guideStep"><span class="guideStepNum">1</span><h3>Full JSON backup</h3><p>Stores scores, metadata, notes, evidence, four vehicle images, final comments, Expert information and weights, Management weights, lock/permission status, and revision history.</p></article>
+<article class="guideStep"><span class="guideStepNum">2</span><h3>Open case</h3><p>Use “Open Assessment File” to restore a Full Case Backup. After restoration, the role and case lock status are applied according to the saved information.</p></article>
+<article class="guideStep"><span class="guideStepNum">3</span><h3>File names</h3><p>All output file names are generated in English for better compatibility across systems; file content follows the Persian or English interface language.</p></article>
+</div>
+<div class="guideCallout warning"><strong>Recommendation:</strong> create a full JSON backup before starting a new assessment, before transferring the case to another device, and before major revisions.</div>
+</section>
+</div>
+</section>
+<div aria-label="اطلاعات سامانه" class="systemFooter entryFooter">
+<a class="footerCompany" data-i18n="footerCompany" href="https://www.linkedin.com/company/bam-automotive-company/" rel="noopener noreferrer" target="_blank">خودروسازان بم</a>
+<span class="footerSep">|</span>
+<span data-i18n="footerSystem">سامانه آفلاین ارزیابی خودرو</span>
+<span class="footerSep">|</span>
+<span data-i18n="footerDesignedBy">طراحی شده توسط</span>
+<a data-i18n="footerShahab" href="https://www.linkedin.com/in/shahab-tanhaiyan-b1156a10a/" rel="noopener noreferrer" target="_blank">شهاب تنهائیان</a>
+<span data-i18n="footerAnd">و</span>
+<a data-i18n="footerNazanin" href="https://www.linkedin.com/in/nazanin-ghaemizadeh/" rel="noopener noreferrer" target="_blank">نازنین قائمی‌زاده</a>
+</div>
+</div>
+</section>
+<div hidden="" id="appShell">
+<header class="topbar">
+<div class="brand"><img alt="لوگوی خودروسازان بم" src="bamco-logo.png"/><div><strong data-i18n="brand">خودروسازان بم</strong><small data-i18n="brandSub">سامانه ارزیابی توصیفی خودروهای سواری</small></div></div>
+<button aria-label="زبان انگلیسی" class="languageButton" id="languageButton" type="button">زبان انگلیسی</button>
+</header>
+<div aria-label="عملیات پنل" class="headerActions">
+<section class="actionCard"><button class="secondary" id="backupButton" type="button">پشتیبان‌گیری کل پرونده</button><button class="excelButton" data-i18n="exportExcel" id="excelButton" type="button">خروجی اکسل</button><label class="button"><span data-i18n="load">باز کردن پرونده</span><input accept="application/json" hidden="" id="loadInput" type="file"/></label><button class="managerOnly excelButton" id="managerExcelButton" type="button">خروجی اکسل داشبورد</button><button class="evaluatorOnly finalizeButton" id="finalizeAssessmentButton" type="button">تأیید نهایی و قفل پرونده</button><button class="managerOnly unlockButton" hidden="" id="unlockAssessmentButton" type="button">بازگشایی برای ویرایش</button><button hidden="" id="printButton" type="button"></button><button class="evaluatorOnly" data-i18n="newAssessment" id="resetButton" type="button">شروع ارزیابی جدید</button><span class="expertHeaderActions" hidden="" id="expertHeaderActions"><button class="expertReset" id="expertResetButton" type="button">بازنشانی وزن‌ها</button><button id="expertConfirmButton" type="button">تأیید نهایی</button><button class="expertExcel" disabled="" id="expertExcelButton" type="button">خروجی اکسل</button></span><button id="switchRoleButton" type="button">تغییر نقش</button></section>
+</div>
+<main>
+<section class="hero managerOnly managerHero"><div class="managerIdentity"><div><small data-i18n="vehicleName">نام خودرو</small><strong id="managerVehicleName">—</strong></div><div><small data-i18n="date">تاریخ ارزیابی</small><strong id="managerAssessmentDate">—</strong></div><div><small data-i18n="evaluator">نام ارزیاب</small><strong id="managerEvaluatorName">—</strong></div><div><small data-i18n="expertName">نام خبره</small><strong id="managerExpertName">—</strong></div></div><div class="managerHeadline"><div class="scoreOrb"><span data-i18n="finalScore">امتیاز نهایی</span><strong id="finalScore">—</strong><small data-i18n="outOf100">از ۱۰۰</small></div><div><span class="managerFinalBadge" id="managerFinalBadge">ارزیابی نشده</span><small id="managerTemporaryLabel">—</small></div></div></section>
+<section class="card metadata">
+<div class="sectionTitle"><h2 data-i18n="assessmentInfo">اطلاعات ارزیابی</h2></div>
+<div class="fieldGrid">
+<label><span data-i18n="evaluator">نام ارزیاب</span><input data-meta="evaluator" type="text"/></label>
+<label class="experienceField"><span data-i18n="evaluatorExperience">سابقه کاری ارزیاب</span><select aria-label="سابقه کاری ارزیاب" data-experience-select="evaluator"></select><input class="experienceOtherInput" data-experience-other="evaluator" hidden="" type="text"/></label>
+<label><span data-i18n="evaluatorPhone">شماره تماس ارزیاب</span><input data-localized-number="true" data-meta="evaluatorPhone" inputmode="numeric" type="tel"/></label>
+<label><span data-i18n="evaluatorEmail">ایمیل ارزیاب</span><input data-meta="evaluatorEmail" dir="ltr" type="email"/></label>
+<label><span data-i18n="date">تاریخ ارزیابی</span><input class="jalaliDateInput" data-meta="date" inputmode="none" readonly="" type="text"/></label>
+<label><span data-i18n="brandLabel">برند خودرو</span><input data-meta="brand" type="text"/></label>
+<label><span data-i18n="model">مدل خودرو</span><input data-meta="model" type="text"/></label>
+<label><span data-i18n="vin">شماره شاسی خودرو</span><input data-localized-number="true" data-meta="vin" type="text"/></label>
+<label><span data-i18n="odometer">کارکرد (کیلومتر)</span><input data-localized-number="true" data-meta="odometer" inputmode="numeric" type="text"/></label>
+</div>
+</section>
+<section class="card vehiclePhotosCard evaluatorOnly" id="evaluatorVehiclePhotos">
+<div class="sectionTitle"><div><h2 data-i18n="vehiclePhotosTitle">تصاویر چهار نمای خودرو</h2><p data-i18n="vehiclePhotosHint">تصاویر نمای جلو، عقب، چپ و راست خودروی مورد ارزیابی را ثبت کنید.</p></div></div>
+<div class="vehiclePhotoGrid" data-vehicle-photo-grid="evaluator"></div>
+</section>
+<section class="card vehiclePhotosCard managerOnly" hidden="" id="managerVehiclePhotos">
+<div class="sectionTitle"><div><h2 data-i18n="vehiclePhotosTitle">تصاویر چهار نمای خودرو</h2><p data-i18n="managerPhotosHint">تصاویر ثبت‌شده توسط ارزیاب</p></div></div>
+<div class="vehiclePhotoGrid" data-vehicle-photo-grid="manager"></div>
+</section>
+<section class="dashboard managerOnly">
+<div class="card progressCard"><div><span data-i18n="completion">تکمیل ارزیابی</span><strong id="completionText">۰ از ۰</strong></div><div class="progress"><i id="progressBar"></i></div></div>
+<div class="card verdictCard"><span data-i18n="verdict">نتیجه ارزیابی</span><strong id="verdict">—</strong><small id="verdictHint">—</small></div>
+</section>
+<section class="card managerOnly managerWeightPanel" id="managerWeightPanel"><div class="sectionTitle"><div><h2>بارگذاری وزن‌های خبره</h2><p>فایل اکسل ابتدا اعتبارسنجی می‌شود و فقط پس از تأیید مدیر روی نتایج اثر می‌گذارد.</p></div><span class="activeWeightsLabel" id="activeWeightsLabel">وزن‌های پیش‌فرض برابر</span></div><div class="managerWeightControls"><label class="managerUploadButton">انتخاب فایل اکسل<input accept=".xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" hidden="" id="managerWeightInput" type="file"/></label><button disabled="" id="managerApproveWeights" type="button">تأیید و اعمال وزن‌ها</button><button class="managerRemoveWeights" disabled="" id="managerRemoveWeights" type="button">حذف فایل و بازگشت به پیش‌فرض</button><div class="managerWeightMessage neutral" id="managerWeightMessage">هنوز فایلی انتخاب نشده است.</div></div><div class="managerWeightPreview" id="managerWeightPreview"></div></section>
+<section class="analyticsGrid managerOnly">
+<section class="card chartCard"><div class="sectionTitle"><div><h2 data-i18n="performanceChart" id="performanceChartTitle">مقایسهٔ عملکرد وزن‌دار شاخص‌ها</h2><p data-i18n="performanceHint" id="performanceChartHint">اثر نسبی هر شاخص پس از اعمال وزن فعال؛ وزن صفر یعنی اثر صفر</p></div><span class="chartScale" id="scoreScaleText">مقیاس امتیاز: ۰ تا ۱۰۰</span></div><div aria-label="نمودار ستونی امتیاز شاخص‌ها" class="scoreChart" id="scoreChart"></div></section>
+<section class="card qualityChartCard"><div class="sectionTitle"><div><h2 data-i18n="qualityDistribution" id="qualityChartTitle">توزیع درجه کیفی</h2><p data-i18n="qualityDistributionHint" id="qualityChartHint">فراوانی امتیازهای ۱ تا ۱۰ در شاخص‌های دارای وزن فعال</p></div></div><div aria-label="نمودار توزیع امتیازهای کیفی" class="qualityChart" data-i18n-aria="qualityDistributionAria" id="qualityChart"></div></section>
+<section class="card radarChartCard"><div class="sectionTitle"><div><h2 data-i18n="radarTitle">نمودار عنکبوتی وزن‌دار شاخص‌ها</h2><p data-i18n="radarHint">اثر نسبی هر شاخص پس از اعمال وزن فعال</p></div></div><div class="radarChart" id="radarChart"></div></section>
+</section>
+<section class="card managerOnly classificationCard"><div class="sectionTitle"><div><h2>طبقه‌بندی نتیجه نهایی خودرو</h2><p>مبنای تصمیم‌گیری برای ادامه فرایند داخلی‌سازی</p></div></div><div class="classificationTable"><div class="classificationRow pass"><strong>۸۵-۱۰۰</strong><span>عبور مقدماتی</span><p>ورود به ارزیابی‌های اقتصادی، امکان‌سنجی صنعتی‌سازی و تأییدهای بعدی</p></div><div class="classificationRow conditional"><strong>۷۵-۸۵</strong><span>عبور مشروط</span><p>ادامه بررسی پس از ارائه برنامه اصلاحی و تأیید مجدد ضعف‌های شناسایی‌شده</p></div><div class="classificationRow revise"><strong>۶۵-۷۵</strong><span>اصلاح و ارزیابی مجدد</span><p>توقف فرایند تا اجرای اصلاحات فنی</p></div><div class="classificationRow reject"><strong>کمتر از ۶۵</strong><span>رد در ارزیابی مقدماتی</span><p>عدم توصیه برای ادامه فرایند داخلی‌سازی</p></div></div></section>
+<section class="card summary managerOnly"><div class="sectionTitle"><div><h2 data-i18n="integratedSummary">خلاصه یکپارچه شاخص‌ها</h2></div><div class="summaryScore"><span data-i18n="finalScore">امتیاز نهایی</span><strong id="summaryFinal">—</strong></div></div><div class="integratedSummary" id="summaryBody"></div></section>
+<section class="card managerOnly strengthWeaknessCard" id="strengthWeaknessCard"><div class="sectionTitle"><div><h2>جمع‌بندی نقاط قوت و ضعف</h2><p>خلاصه خودکار بر اساس میانگین شاخص‌های ارزیابی‌شده</p></div></div><div class="strengthWeaknessGrid"><div class="strengthPanel"><h3>نقاط قوت اصلی</h3><div id="strengthList"></div></div><div class="weaknessPanel"><h3>نقاط ضعف و اولویت‌های بهبود</h3><div id="weaknessList"></div></div></div></section>
+<section class="card managerOnly managerReviewComments" id="managerReviewComments"><div class="sectionTitle"><div><h2 id="managerReviewCommentsTitle">نظر ارزیاب و خبره</h2><p id="managerReviewCommentsHint">جمع‌بندی نهایی ثبت‌شده توسط ارزیاب و خبره</p></div></div><div class="managerReviewCommentsGrid"><article><strong id="managerEvaluatorCommentTitle">نظر نهایی ارزیاب</strong><p id="managerEvaluatorComment">نظری ثبت نشده است.</p></article><article><strong id="managerExpertCommentTitle">نظر نهایی خبره</strong><p id="managerExpertComment">نظری ثبت نشده است.</p></article></div></section>
+<section class="card managerOnly revisionHistoryCard" hidden="" id="revisionHistoryCard"><div class="sectionTitle"><div><h2 id="revisionHistoryTitle">سوابق اصلاحات پرونده</h2><p id="revisionHistoryHint">نام، دلیل اصلاح، تاریخ و زمان ویرایش‌های اعمال‌شده پس از بازگشایی پرونده</p></div></div><div class="revisionHistoryList" id="revisionHistoryList"></div></section>
+<section aria-labelledby="scoreGuideTitle" class="scoreGuide evaluatorOnly"><h2 data-i18n="scoreGuideTitle" id="scoreGuideTitle">راهنمای امتیازدهی ۱ تا ۱۰</h2><div class="scoreGuideGrid" id="scoreGuideGrid"></div></section>
+<section aria-label="درصد تکمیل ارزیابی" class="card evaluatorProgress evaluatorOnly"><div class="progressHeading"><div><span data-i18n="completion">تکمیل ارزیابی</span><strong id="evaluatorCompletionPercent">۰٪</strong></div><span id="evaluatorCompletionText">۰ از ۰ پاسخ</span></div><div class="progress progressLarge"><i id="evaluatorProgressBar"></i></div></section>
+<section class="expertPanel" hidden="" id="expertPanel"></section>
+<section class="assessmentLayout">
+<aside class="criteriaNav"><div class="navTitle" data-i18n="criteria">شاخص‌های ارزیابی</div><nav id="criteriaTabs"></nav></aside>
+<section class="criteria" id="criteria"></section>
+</section>
+</main>
+<footer aria-label="اطلاعات سامانه" class="systemFooter appFooter">
+<a class="footerCompany" data-i18n="footerCompany" href="https://www.linkedin.com/company/bam-automotive-company/" rel="noopener noreferrer" target="_blank">خودروسازان بم</a>
+<span class="footerSep">|</span>
+<span data-i18n="footerSystem">سامانه آفلاین ارزیابی خودرو</span>
+<span class="footerSep">|</span>
+<span data-i18n="footerDesignedBy">طراحی شده توسط</span>
+<a data-i18n="footerShahab" href="https://www.linkedin.com/in/shahab-tanhaiyan-b1156a10a/" rel="noopener noreferrer" target="_blank">شهاب تنهائیان</a>
+<span data-i18n="footerAnd">و</span>
+<a data-i18n="footerNazanin" href="https://www.linkedin.com/in/nazanin-ghaemizadeh/" rel="noopener noreferrer" target="_blank">نازنین قائمی‌زاده</a>
+</footer>
+</div>
+<link href="features.css" rel="stylesheet"/>
+<link href="v15.css" rel="stylesheet"/>
+<link href="v20.css" rel="stylesheet"/>
+<link href="v21.css" rel="stylesheet"/>
+<link href="v22.css" rel="stylesheet"/>
+<link href="v23.css" rel="stylesheet"/>
+<link href="v24.css" rel="stylesheet"/>
+<link href="v25.css" rel="stylesheet"/>
+<link href="v26.css" rel="stylesheet"/>
+<link href="v29.css" rel="stylesheet"/>
+<link href="v32.css" rel="stylesheet"/>
+<link href="v37.css" rel="stylesheet"/><link href="v39.css" rel="stylesheet"/><link href="v40.css" rel="stylesheet"/><link href="v41.css" rel="stylesheet"/><link href="v42.css" rel="stylesheet"/><link href="v43.css" rel="stylesheet"/><link href="v44.css" rel="stylesheet"/><link href="v45.css" rel="stylesheet"/><link href="v46.css" rel="stylesheet"/><link href="v47.css" rel="stylesheet"/><link href="v48.css" rel="stylesheet"/><link href="v49.css" rel="stylesheet"/><link href="v50.css" rel="stylesheet"/><link href="v51.css" rel="stylesheet"/><link href="v52.css" rel="stylesheet"/>
+<script src="data.js"></script><script src="vendor/exceljs.min.js"></script><script src="app.js"></script><script src="expert.js"></script><script src="manager.js"></script><script src="features.js"></script><script src="guide.js"></script><script src="v20.js"></script><script src="v21.js"></script><script src="v22.js"></script><script src="v23.js"></script><script src="v24.js"></script><script src="v26.js"></script><script src="v29.js"></script><script src="v30.js"></script><script src="v32.js"></script><script src="v40.js"></script><script src="v42.js"></script><script src="v45.js"></script><script src="v46.js"></script><script src="v48.js"></script><script src="v49.js"></script>
+<script src="bacheck-universal.js"></script></body>
+</html>
