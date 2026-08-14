@@ -1,0 +1,23 @@
+/* BACHECK v58 — final universal override. This file must load last. */
+html body [hidden]{display:none!important}
+#entryScreen .entryBrand img,.topbar .brand img{
+  object-fit:contain!important;object-position:center!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:0!important;filter:none!important;
+}
+.topbar .brand{box-shadow:none!important}
+@media(min-width:901px){
+  .topbar .brand{background:#f1f5f8!important;color:#153f68!important;border-radius:12px!important;padding:8px 12px!important;border:1px solid #d7e2e9!important}
+  .topbar .brand strong{color:#153f68!important}.topbar .brand small{color:#647f99!important}
+  .topbar .brand img{width:116px!important;height:62px!important}
+}
+@media(max-width:900px){
+  body .topbar .brand,body.mobileManagerActive .topbar .brand{background:#f1f5f8!important;border:1px solid #d7e2e9!important;box-shadow:none!important}
+  body .topbar .brand img,body.mobileManagerActive .topbar .brand img{width:112px!important;height:58px!important;flex:0 0 112px!important}
+  #entryScreen .entryBrand img{width:118px!important;height:62px!important;max-width:118px!important;max-height:62px!important}
+}
+@media(max-width:430px){body .topbar .brand img{width:100px!important;height:54px!important;flex-basis:100px!important}}
+
+.bacheckOfflineReadyV58{position:fixed;z-index:35000;left:50%;bottom:max(12px,env(safe-area-inset-bottom));transform:translateX(-50%);padding:7px 13px;border-radius:999px;background:#6f5015;color:white;font:700 12px/1.4 Tahoma,Arial,sans-serif;box-shadow:0 8px 24px #00152d38}.bacheckOfflineReadyV58[hidden]{display:none!important}
+
+.bacheckFileDialogV58{position:fixed;inset:0;z-index:50000;display:grid;place-items:center;padding:18px;background:#06172bb3;backdrop-filter:blur(5px)}
+.bacheckFileDialogV58[hidden]{display:none!important}.bacheckFileDialogCard{width:min(520px,100%);max-height:85vh;overflow:auto;background:#fff;border-radius:20px;padding:22px;color:#173b62;box-shadow:0 25px 80px #0005}.bacheckFileDialogCard h2{margin:0 0 8px;font-size:20px}.bacheckFileDialogCard p{margin:0 0 12px;line-height:1.8;color:#5e7389}.bacheckFileDialogCard>strong{display:block;direction:ltr;text-align:left;word-break:break-all;padding:10px 12px;border-radius:10px;background:#f3f7fa;color:#234a70;font-family:Arial,sans-serif}.bacheckFileActionsV58{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.bacheckFileActionsV58 button,.bacheckFileActionsV58 a,.bacheckCloseV58{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}.bacheckFileActionsV58 a{background:#2463a5;color:#fff}.bacheckFileActionsV58 a#bacheckOpenV58{background:#eef3f8;color:#27445e;border:1px solid #d6e1e9}.bacheckCloseV58{width:100%}
+@media(max-width:560px){.bacheckFileActionsV58{display:grid;grid-template-columns:1fr}.bacheckFileActionsV58>*{width:100%}}

@@ -1,0 +1,9 @@
+BACHECK Universal Offline v57
+- Installed PWA name changed to BACHECK on Windows Chrome, iOS and Android.
+- New BACHECK/BAMCO Product Development & Quality artwork used for PWA/home-screen icons.
+- In-app header artwork remains the same BAC logo used on the sign-in screen, consistently across Evaluator, Expert and Management.
+- Universal responsive behavior: desktop management keeps the desktop dashboard; mobile management remains an isolated single management screen.
+- Offline app-shell strategy changed to pre-cache all local HTML/CSS/JS/images/export libraries and use cached navigation when offline.
+- Full Case Backup JSON and all Excel exports use the cross-platform BACHECK file delivery layer.
+- Windows Chrome downloads files normally; iOS/Android use Save/Share plus download fallback.
+- Manifest, Apple title, browser title, Capacitor metadata, icons and cache version updated for BACHECK.

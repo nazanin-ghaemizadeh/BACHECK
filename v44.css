@@ -1,0 +1,131 @@
+/* v44 — role-scoped edit authorization + larger comparison radars + management-style comparison table */
+
+/* Keep a finalized case visually locked except for the exact authorized user+role. */
+.caseLocked.caseAuthorizedEdit .evaluatorOnly input,
+.caseLocked.caseAuthorizedEdit .evaluatorOnly textarea,
+.caseLocked.caseAuthorizedEdit .evaluatorOnly button:not(#finalizeAssessmentButton),
+.caseLocked.caseAuthorizedEdit .metadata input,
+.caseLocked.caseAuthorizedEdit #evaluatorVehiclePhotos button,
+.caseLocked.caseAuthorizedEdit #evaluatorVehiclePhotos input,
+.caseLocked.caseAuthorizedEdit .assessmentLayout button,
+.caseLocked.caseAuthorizedEdit .assessmentLayout input,
+.caseLocked.caseAuthorizedEdit .assessmentLayout textarea{
+  pointer-events:auto!important;
+  opacity:1!important;
+}
+.caseLocked.caseAuthorizedEdit #finalizeAssessmentButton{cursor:pointer!important;opacity:1!important}
+.caseLocked.expertMode:not(.caseAuthorizedEdit) #expertPanel input,
+.caseLocked.expertMode:not(.caseAuthorizedEdit) #expertPanel textarea,
+.caseLocked.expertMode:not(.caseAuthorizedEdit) #expertPanel select,
+.caseLocked.expertMode:not(.caseAuthorizedEdit) #expertPanel button,
+.caseLocked.expertMode:not(.caseAuthorizedEdit) #expertHeaderActions button{
+  pointer-events:none!important;
+  opacity:.58!important;
+}
+.caseLocked.expertMode.caseAuthorizedEdit #expertPanel input,
+.caseLocked.expertMode.caseAuthorizedEdit #expertPanel textarea,
+.caseLocked.expertMode.caseAuthorizedEdit #expertPanel select,
+.caseLocked.expertMode.caseAuthorizedEdit #expertPanel button,
+.caseLocked.expertMode.caseAuthorizedEdit #expertHeaderActions button{
+  pointer-events:auto!important;
+  opacity:1!important;
+}
+
+/* Larger, management-scale comparison radars. */
+.comparisonRadarPair{gap:22px!important;align-items:stretch!important}
+.comparisonRadarPane{padding:16px 12px 10px!important;min-height:610px!important}
+.comparisonRadarPane>strong{font-size:16px!important;margin-bottom:2px!important}
+.comparisonManagerRadar.radarChart{min-height:570px!important;width:100%!important;display:grid!important;place-items:center!important;overflow:visible!important}
+.comparisonManagerRadar.radarChart svg{width:min(820px,100%)!important;height:560px!important;max-width:none!important;overflow:visible!important}
+.comparisonManagerRadar.radarChart text{font-size:11px!important;font-weight:700}
+.comparisonManagerRadar .radarValue{font-size:12px!important;font-weight:900!important}
+
+/* Match the Management integrated-summary table visual language. */
+.managementStyleComparisonTable{
+  margin-top:18px!important;
+  overflow-x:auto!important;
+  border:1px solid #d9e6ee!important;
+  border-radius:16px!important;
+  background:#fff!important;
+}
+.managementStyleComparisonHead,
+.managementStyleComparisonRow{
+  display:grid!important;
+  grid-template-columns:58px 72px minmax(250px,1.55fr) minmax(135px,.72fr) minmax(135px,.72fr) minmax(115px,.62fr)!important;
+  align-items:center!important;
+  gap:10px!important;
+  min-width:940px!important;
+}
+.managementStyleComparisonHead{
+  min-height:0!important;
+  padding:14px 16px!important;
+  background:linear-gradient(135deg,#123f65,#0c756d)!important;
+  color:#fff!important;
+  font-weight:800!important;
+}
+.managementStyleComparisonHead>*{padding:0!important;text-align:center!important}
+.managementStyleComparisonHead strong{text-align:right!important}
+.english .managementStyleComparisonHead strong{text-align:left!important}
+.managementStyleComparisonRow{
+  position:relative!important;
+  min-height:0!important;
+  padding:12px 16px!important;
+  border-top:0!important;
+  border-bottom:1px solid #e4edf3!important;
+  background:#fff!important;
+  transition:.2s!important;
+}
+.managementStyleComparisonRow:last-child{border-bottom:0!important}
+.managementStyleComparisonRow:hover{background:#f4fafb!important;transform:translateX(-2px)}
+.managementStyleComparisonRow::before{
+  content:"";
+  position:absolute;
+  right:0;
+  top:8px;
+  bottom:8px;
+  width:4px;
+  border-radius:4px;
+  background:var(--row-accent);
+}
+.english .managementStyleComparisonRow::before{right:auto;left:0}
+.managementStyleComparisonRow>*{padding:0!important;text-align:center!important}
+.comparisonRowNumber{color:#6e8293;font-weight:800}
+.comparisonRowIcon{display:grid;place-items:center}
+.comparisonRowIcon>*{width:42px!important;height:42px!important}
+.managementStyleComparisonRow .comparisonCriterion{color:#183e5e!important;line-height:1.65!important;text-align:right!important}
+.english .managementStyleComparisonRow .comparisonCriterion{text-align:left!important}
+.comparisonVehicleScore{color:#176d91;font-weight:800;font-family:"Times New Roman",serif}
+.managementStyleComparisonRow .comparisonDiff{font-size:16px;font-weight:900}
+
+@media(max-width:1250px){
+  .comparisonRadarPair{grid-template-columns:1fr!important}
+  .comparisonRadarPane{min-height:590px!important}
+}
+.comparisonRowIcon > .criterionIcon{
+  width:42px!important;
+  height:42px!important;
+  color:#fff!important;
+  background:linear-gradient(135deg,#0b6594,#159486)!important;
+  border:0!important;
+  box-shadow:0 5px 12px #0b56732b;
+}
+.comparisonRowIcon > .criterionIcon svg{
+  display:block!important;
+  width:24px!important;
+  height:24px!important;
+  fill:none!important;
+  stroke:currentColor!important;
+  stroke-width:1.8!important;
+  stroke-linecap:round!important;
+  stroke-linejoin:round!important;
+}
+.caseLocked.caseAuthorizedEdit .uploadButton,
+.caseLocked.caseAuthorizedEdit .attachment button,
+.caseLocked.caseAuthorizedEdit .vehiclePhotoButton,
+.caseLocked.caseAuthorizedEdit .vehiclePhotoRemove{
+  pointer-events:auto!important;
+  opacity:1!important;
+  cursor:pointer!important;
+  filter:none!important;
+}
+#entryRoleChoices .roleChoice[hidden]{display:none!important}
